@@ -2,7 +2,7 @@
     {
         "id": "CR001",
         "productName": "Evolve Cashback Card",
-        "rewards": "Earn 5% cash back for purchases at different merchants vary across each Quarter,2% on dining & 1% on all other purchases \n",
+        "rewards": "Earn 5% cash back for purchases at different merchants vary across each Quarter, 2% on dining & 1% on all other purchases",
         "annualFee": 0.0,
         "apr": "18.24% - 26.99%",
         "introOffer": null
@@ -10,15 +10,15 @@
     {
         "id": "CR002",
         "productName": "Evolve TravelPlus Card",
-        "rewards": "2 % on ticket/hotel booking with sepcific Merchants\n",
+        "rewards": "2% on ticket/hotel booking with specific merchants\n",
         "annualFee": 99.0,
         "apr": "19.00% - 29.99%",
-        "introOffer": "Card opening bonus with 50000 points (equivalent to $500)  if card member spends $4000 in first 3 months"
+        "introOffer": "Card opening bonus with 50000 points (equivalent to $500) if card member spends $4000 in first 3 months"
     },
     {
         "id": "CR003",
-        "productName": "Evolve Fuel plus Card",
-        "rewards": "2% on Fuels and 1% on remaining purchases",
+        "productName": "Evolve Fuel Plus Card",
+        "rewards": "2% on Fuel and 1% on remaining purchases",
         "annualFee": 0.0,
         "apr": "19.00% - 29.99%",
         "introOffer": null
@@ -33,18 +33,18 @@
     },
     {
         "id": "CR005",
-        "productName": "Evolve blue Cash Card",
-        "rewards": "6% bonus on Grocery purchases from specific stores\n1% on All purchases\n",
+        "productName": "Evolve Blue Cash Card",
+        "rewards": "6% bonus on Grocery purchases from specific stores. 1% bonus on All purchases",
         "annualFee": 99.0,
         "apr": "18.00% - 29.99%",
         "introOffer": "Card opening bonus $200 if card member spends $2000 in first 6 months"
     },
     {
         "id": "CR006",
-        "productName": "Evolve renovation Card",
-        "rewards": "2% rewards on Home renovation & Electric appliances appliances from specifc Merchants.\n\n1% on All purchases",
+        "productName": "Evolve Renovation Card",
+        "rewards": "2% rewards on Home renovation & Electric appliances from specifc Merchants.\n\n1% on All purchases",
         "annualFee": 0.0,
         "apr": "18.00% - 29.99%",
-        "introOffer": "Purchases over $1500 on Differ Intrest Promos"
+        "introOffer": "Purchases over $1500 on Different Interest Promos"
     }
 ]

@@ -8,38 +8,53 @@ import { read, utils } from 'xlsx';
 export default defineConfig({
   assetsInclude: ['**/*.xlsx'],
 
-  plugins: [react(), VitePWA({
-    registerType: 'autoUpdate',
-    injectRegister: false,
+  optimizeDeps: {
+    include: [
+      '@emotion/react',
+      '@emotion/styled',
+      '@mui/material/Tooltip'
+    ],
+  },
 
-    pwaAssets: {
-      disabled: false,
-      config: true,
+  plugins: [react({
+    jsxImportSource: '@emotion/react',
+    babel: {
+      plugins: ['@emotion/babel-plugin'],
     },
+  }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      injectRegister: false,
 
-    manifest: {
-      name: 'genai-hackathon-ui',
-      short_name: 'genai-hackathon-ui',
-      description: 'UI for the Capgemini Genai hackathon',
-      theme_color: '#ffffff',
-    },
+      pwaAssets: {
+        disabled: false,
+        config: true,
+      },
 
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
-      cleanupOutdatedCaches: true,
-      clientsClaim: true,
-    },
+      manifest: {
+        name: 'genai-hackathon-ui',
+        short_name: 'genai-hackathon-ui',
+        description: 'UI for the Capgemini Genai hackathon',
+        theme_color: '#ffffff',
+      },
 
-    devOptions: {
-      enabled: false,
-      navigateFallback: 'index.html',
-      suppressWarnings: true,
-      type: 'module',
-    },
-  }),{ // this plugin handles ?sheetjs tags
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+      },
+
+      devOptions: {
+        enabled: false,
+        navigateFallback: 'index.html',
+        suppressWarnings: true,
+        type: 'module',
+      },
+    }
+  ), { // this plugin handles ?sheetjs tags
     name: "vite-sheet",
     transform(code, id) {
-      if(!id.match(/\?sheetjs$/)) return;
+      if (!id.match(/\?sheetjs$/)) return;
       var wb = read(readFileSync(id.replace(/\?sheetjs$/, "")));
       var data = utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
       return `export default JSON.parse('${JSON.stringify(data).replace(/\\/g, "\\\\")}')`;

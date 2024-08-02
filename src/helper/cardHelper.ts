@@ -1,13 +1,25 @@
 import { CreditCard } from "../types/evolve.types"
 import detailData from "../__data__/detailData.json";
 import abstractData from "../__data__/abstractData.json";
+import loanData from "../__data__/loanData.json";
 import CR001 from "../assets/CR001.png";
 import CR002 from "../assets/CR002.png";
 import CR003 from "../assets/CR003.png";
 import CR004 from "../assets/CR004.png";
 import CR005 from "../assets/CR005.png";
 import CR006 from "../assets/CR006.png";
-import { DINING_CARDS, EVERYDAY_CARDS, FUEL_CARDS, GROCERY_CARDS, MAX_REWARD_CARDS, RENOVATION_CARDS, TRAVEL_CARDS } from "../constants/evolve.constants";
+import { DINING_CARDS, EVERYDAY_CARDS, FUEL_CARDS, GROCERY_CARDS, MAX_REWARD_CARDS, Q1, Q2, Q3, Q4, Q5, RENOVATION_CARDS, TRAVEL_CARDS } from "../constants/evolve.constants";
+
+export const getLoanList = (query: string | null) => {
+    switch (query) {
+        case "personal":
+            return [loanData[0]];
+        case "student":
+            return [loanData[1]];
+        default:
+            return loanData;
+    }
+}
 
 export const getProductList = (query: string | null) => {
     switch (query) {
@@ -32,31 +44,19 @@ export const getProductList = (query: string | null) => {
     }
 }
 
-const populateList = (idList: string[] | undefined) => {
+export const populateList = (idList: string[] | undefined) => {
     if (idList) {
         const newList: CreditCard[] = [];
         idList.forEach((id) => {
-            const cardDetail = detailData.find((c) => c.id === id)
-            if (!cardDetail) return;
-            const cardData = abstractData.find((c) => c.id === id);
-            if (!cardData) return;
-            newList.push({
-                ...cardData,
-                cardDetail: cardDetail,
-                image: getLogo(cardData.id)
-            })
+            const card = getCreditCard(id);
+            if (card) newList.push(card);
         });
         return newList;
     } else {
         const newList: CreditCard[] = [];
-        abstractData.forEach((card) => {
-            const cardDetail = detailData.find((c) => c.id === card.id)
-            if (!cardDetail) return;
-            newList.push({
-                ...card,
-                cardDetail: cardDetail,
-                image: getLogo(card.id)
-            })
+        abstractData.forEach((c) => {
+            const card = getCreditCard(c.id);
+            if (card) newList.push(card);
         });
         return newList;
     }
@@ -72,14 +72,34 @@ export const getCreditCard = (id: string) => {
 
     const card: CreditCard = {
         ...cardData,
-        cardDetail: cardDetail,
+        productDetail: cardDetail,
         image: getLogo(id)
     }
-    console.log(card);
     return card;
 }
 
-const getLogo = (id: string) => {
+export const getLoan = (id: string) => {
+    return loanData.find((l) => l.id === id);
+}
+
+export const getQuestion = (id: string | null) => {
+    switch (id) {
+        case "Q1":
+            return Q1;
+        case "Q2":
+            return Q2;
+        case "Q3":
+            return Q3;
+        case "Q4":
+            return Q4;
+        case "Q5": 
+            return Q5;
+        default:
+            return Q1;
+    }
+}
+
+export const getLogo = (id: string) => {
     switch (id) {
         case "CR001":
             return CR001;

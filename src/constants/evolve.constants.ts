@@ -76,6 +76,25 @@ export const Q4: Question = {
         {
             label: "Renovation", 
             onSelect: (nav) => nav("/productList?list=renovation")
+        },
+        {
+            label: "Unsure", 
+            onSelect: (nav) => nav("/unsure?id=Q5")
+        }
+    ]
+}
+
+export const Q5: Question = {
+    id: "Q5",
+    question: "Do you prioritize a card designed for everyday spending or a premium card that offers maximum rewards?",
+    options: [
+        {
+            label: "Everyday Purchase", 
+            onSelect: (nav) => nav("/productList?list=everyday")
+        },
+        {
+            label: "Max Rewards", 
+            onSelect: (nav) => nav("/productList?list=reward")
         }
     ]
 }

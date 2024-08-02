@@ -1,29 +1,33 @@
 import { Box, Grid, Typography, styled } from "@mui/material";
 import ListItem from "../componenets/ListItem";
-import { getCreditCard, getProductList } from "../helper/cardHelper";
+import { getProductList } from "../helper/cardHelper";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { CreditCard } from "../types/evolve.types";
+import Header from "../componenets/Header";
+import ChatCard from "../componenets/ChatCard";
+import { useLocation } from "react-router-dom";
 
-const ListContainer = styled(Box)({
+export const ListContainer = styled(Box)({
     maxWidth: "100%",
     minHeight: "100vh",
     boxSizing: "border-box",
     padding: "12px"
 });
 
-const TableContainer = styled(Box)({
+export const TableContainer = styled(Box)({
     display: "flex",
     flexDirection: "column",
-    width: "100%"
-});
-
-const RowContainer = styled(Grid)({
     width: "100%",
-    boxSizing: "border-box"
+    gap: "24px"
 });
 
-const HeaderText = styled(Typography)({
+export const RowContainer = styled(Grid)({
+    width: "100%",
+    boxSizing: "border-box",
+    padding: "0 24px"
+});
+
+export const HeaderText = styled(Typography)({
     fontSize: "16px",
     fontWeight: "bold"
 });
@@ -31,16 +35,19 @@ const HeaderText = styled(Typography)({
 const ProductListPage = () => {
     const [prodList, setProdList] = useState<CreditCard[]>([]);
 
+    const location = useLocation();
+
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         const queryList = queryParams.get('list');
         setProdList(getProductList(queryList));
-    }, []);
+    }, [location]);
 
     return (
         <ListContainer>
+            <Header />
             <TableContainer>
-                <RowContainer container direction={"row"} sx={{borderBottom: "4px solid black"}}>
+                <RowContainer container direction={"row"} sx={{borderBottom: "4px solid #1976d2"}}>
                     <Grid item md={2}>
                         <HeaderText>Credit Card</HeaderText>
                     </Grid>
@@ -57,7 +64,7 @@ const ProductListPage = () => {
                         <HeaderText>Intro Offer</HeaderText>
                     </Grid>
                     <Grid item md={2}>
-                        <HeaderText>Apply Now</HeaderText>
+                        <HeaderText sx={{textAlign: "center"}}>Apply Now</HeaderText>
                     </Grid>
                 </RowContainer>
                 
@@ -67,6 +74,7 @@ const ProductListPage = () => {
                     )
                 })}
             </TableContainer>
+            <ChatCard />
         </ListContainer>
     )
 };

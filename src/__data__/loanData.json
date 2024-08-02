@@ -1,0 +1,28 @@
+[
+    {
+        "id": "LN001",
+        "productName": "Evolve Personal Loan",
+        "apr": "8.00 to 31.99",
+        "loanAmount": "$1,000 - $30,000",
+        "loanTerm": "Up to 4 years",
+        "productDetail": {
+            "id": "LN001",
+            "Column1": "Your APR will be between 8.00% and 31.99% based on creditworthiness at time of application for loan terms of 12-48 months. For example, if you get approved for a $10,000 loan at 17.00% APR for a term of 48 months, you'll pay just $288.55 per month. The estimated total cost of the loan in this example would be $13,850.42.",
+            "Column2": "No origination fees, no closing costs, no fees at all as long as you pay on time.",
+            "Column3": "Choose from multiple repayment options to fit your budget - 12, 18, 24, 30, 36, 42 or 48 months."
+        }
+    },
+    {
+        "id": "LN002",
+        "productName": "Evolve Student Loan",
+        "apr": "4.15",
+        "loanAmount": "$10,000 - $100,000",
+        "loanTerm": "Up to 12 years",
+        "productDetail": {
+            "id": "LN002",
+            "Column1": "Your APR will be 4.5% fixed on creditworthiness at time of application for loan terms of up to 15 years. For example, if you get approved for a $30,000 loan at 4.5% APR for a term of 10 years, you'll pay just $310.92 per month. The estimated total cost of the loan in this example would be $37,309.83.",
+            "Column2": "Please contact us for Auto debit discount.",
+            "Column3": "Choose from multiple repayment options to fit your budget - 5 to 12 years."
+        }
+    }
+]
