@@ -6,6 +6,7 @@ const ChatText = styled(Typography)({
 })
 
 const CardContainer = styled(Box)({
+    width: "100%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "right"

@@ -29,7 +29,7 @@ const StyledPaper = styled(Paper)({
   backgroundColor: "#F6F6F6",
   width: "fit-content",
   padding: "24px",
-  marginBottom: "24px"
+  marginBottom: "64px"
 })
 
 const Heading = styled(Typography)({
@@ -49,7 +49,7 @@ const LandingPage = () => {
           fontSize: "36px",
           fontWeight: "bold",
           textAlign: "center",
-          marginBottom: "14px"
+          marginBottom: "32px"
         }}
       >
         Evolve Bank
@@ -81,7 +81,7 @@ const LandingPage = () => {
 
       <Heading sx={{ textAlign: "center", marginBottom: "14px" }}>How can we help?</Heading>
       <ButtonGroup variant="outlined">
-        <Button onClick={() => navigate("/productList")}>Credit Cards</Button>
+        <Button onClick={() => navigate("/unsure?id=Q4")}>Credit Cards</Button>
         <Button onClick={() => navigate("/loanList?list=personal")}>Personal Loans</Button>
         <Button onClick={() => navigate("/loanList?list=student")}>Student Loans</Button>
         <Button>BNPL</Button>

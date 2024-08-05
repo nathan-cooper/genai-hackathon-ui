@@ -6,6 +6,7 @@ import { CreditCard } from "../types/evolve.types";
 import Header from "../componenets/Header";
 import ChatCard from "../componenets/ChatCard";
 import { useLocation } from "react-router-dom";
+import BackButton from "../componenets/BackButton";
 
 export const ListContainer = styled(Box)({
     maxWidth: "100%",
@@ -46,6 +47,7 @@ const ProductListPage = () => {
     return (
         <ListContainer>
             <Header />
+            <BackButton />
             <TableContainer>
                 <RowContainer container direction={"row"} sx={{borderBottom: "4px solid #1976d2"}}>
                     <Grid item md={2}>

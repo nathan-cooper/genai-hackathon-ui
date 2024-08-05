@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../componenets/Header";
 import { StyledPaper } from "../componenets/ListItem";
 import ChatCard from "../componenets/ChatCard";
+import BackButton from "../componenets/BackButton";
 
 const UnsureContainer = styled(Box)({
     maxWidth: "100%",
@@ -43,7 +44,7 @@ const QuestionButton = styled(Button)({
 
 const UnsurePage = () => {
     const [question, setQuestion] = useState<Question | undefined>();
-    const [selection, setSelection] = useState<Option | undefined>();
+    // const [selection, setSelection] = useState<Option | undefined>();
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -54,15 +55,16 @@ const UnsurePage = () => {
         setQuestion(getQuestion(id));
     }, [location]);
 
-    const handleNext = () => {
-        if (selection) {
-            selection.onSelect(navigate);
-        }
-    }
+    // const handleNext = () => {
+    //     if (selection) {
+    //         selection.onSelect(navigate);
+    //     }
+    // }
 
     return (
         <UnsureContainer>
             <Header />
+            <BackButton />
             {question && (
                 <StyledPaper elevation={3}
                     sx={{marginTop: "36px", width: "fit-content"}}
@@ -73,11 +75,12 @@ const UnsurePage = () => {
                             {question.options.map((option, index) => {
                                 return (
                                     <QuestionButton key={index}
-                                        variant={selection?.label === option.label ? "contained" : "outlined"}
+                                        // variant={selection?.label === option.label ? "contained" : "outlined"}
+                                        variant="outlined"
                                         sx={{
                                             minWidth: "300px"
                                         }}
-                                        onClick={() => setSelection(option)}
+                                        onClick={() => option.onSelect(navigate)}
                                     >
                                         {option.label}
                                     </QuestionButton>
@@ -85,7 +88,7 @@ const UnsurePage = () => {
                             })}
                         </QuestionContainer>
 
-                        <Button variant="contained" onClick={handleNext}>Next</Button>
+                        {/* <Button variant="contained" onClick={handleNext}>Next</Button> */}
                     </ColContainer>
                 </StyledPaper>
             )}
