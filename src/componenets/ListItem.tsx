@@ -1,4 +1,4 @@
-import { Button, Grid, Link, Paper, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
+import { Button, Grid, Link, Paper, Typography, styled } from "@mui/material";
 import { CreditCard } from "../types/evolve.types";
 import { useNavigate } from "react-router-dom";
 

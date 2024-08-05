@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import logo from "../assets/Evolve Bank Logo_white_logo_only.png";
 import EvolveMenu from './EvolveMenu';
 import { useNavigate } from 'react-router-dom';
-import { Box, Grid, styled } from '@mui/material';
+import { Box, styled } from '@mui/material';
 
 const HeaderButtonContainer = styled(Box)(({ theme }) => ({
   display: "flex",
