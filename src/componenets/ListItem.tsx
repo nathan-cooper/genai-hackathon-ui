@@ -1,17 +1,23 @@
-import { Button, Grid, Link, Paper, Typography, styled } from "@mui/material";
+import { Button, Grid, Link, Paper, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
 import { CreditCard } from "../types/evolve.types";
 import { useNavigate } from "react-router-dom";
 
-const RowContainer = styled(Grid)({
+const RowContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
-    boxSizing: "border-box"
-});
+    boxSizing: "border-box",
+    [theme.breakpoints.down("md")]: {
+        gap: "16px"
+    }
+}))
 
-const ColContainer = styled(Grid)({
+const ColContainer = styled(Grid)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
-    gap: "16px"
-});
+    gap: "16px",
+    [theme.breakpoints.down("md")]: {
+        alignItems: "center"
+    }
+}))
 
 export const StyledPaper = styled(Paper)({
     backgroundColor: "#F6F6F6",
@@ -19,9 +25,22 @@ export const StyledPaper = styled(Paper)({
     padding: "24px"
 });
 
-const ColText = styled(Typography)({
-    fontSize: "18px"
-});
+const ColText = styled(Typography)(({ theme }) => ({
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+        textAlign: "center"
+    }
+}));
+
+export const MobileLabel = styled(Typography)(({ theme }) => ({
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+        display: "flex",
+        textAlign: "center",
+        fontWeight: "bold",
+        justifySelf: "center"
+    }
+}))
 
 export interface ListItemProps {
     card: CreditCard
@@ -42,13 +61,14 @@ const ListItem = ({ card }: ListItemProps) => {
                         <img src={card.image} />
                     </Grid>
                     <Grid item>
-                        <ColText>
+                        <ColText sx={{ fontWeight: "bold" }}>
                             {card.productName}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        <MobileLabel>Annual Fee</MobileLabel>
                         <ColText>
                             {card.annualFee ? card.annualFee.toLocaleString('en-US', {
                                 style: 'currency',
@@ -58,21 +78,24 @@ const ListItem = ({ card }: ListItemProps) => {
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        <MobileLabel>APR</MobileLabel>
                         <ColText>
                             {card.apr}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        {card.rewards && <MobileLabel>Rewards</MobileLabel>}
                         <ColText>
                             {card.rewards}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        {card.introOffer && <MobileLabel>Intro Offer</MobileLabel>}
                         <ColText>
                             {card.introOffer}
                         </ColText>

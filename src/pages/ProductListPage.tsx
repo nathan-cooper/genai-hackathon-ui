@@ -48,7 +48,12 @@ const ProductListPage = () => {
         <ListContainer>
             <Header />
             <TableContainer>
-                <RowContainer container direction={"row"} sx={{borderBottom: "4px solid #1976d2"}}>
+                <RowContainer container direction={"row"} 
+                    sx={{
+                        borderBottom: "4px solid #1976d2",
+                        display: { xs: "none", md: "flex" }
+                    }}
+                >
                     <Grid item md={2}>
                         <HeaderText>Credit Card</HeaderText>
                     </Grid>

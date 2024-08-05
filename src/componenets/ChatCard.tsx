@@ -6,13 +6,18 @@ const ChatText = styled(Typography)({
     fontWeight: "bold"
 })
 
-const CardContainer = styled(Box)({
+const CardContainer = styled(Box)(({ theme }) => ({
     marginTop: "48px",
     width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "right"
-})
+    justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+        flexDirection: "column",
+        gap: "32px",
+        alignItems: "center"
+    }
+}));
 
 const StyledCard = styled(Card)({
     backgroundColor: "#f5f5f5",

@@ -34,7 +34,7 @@ const QuestionContainer = styled(Box)({
 const Heading = styled(Typography)({
     fontSize: "24px",
     fontWeight: "bold",
-    textAlign: "right"
+    textAlign: "center"
 });
 
 const QuestionButton = styled(Button)({
@@ -76,7 +76,7 @@ const UnsurePage = () => {
                                         // variant={selection?.label === option.label ? "contained" : "outlined"}
                                         variant="outlined"
                                         sx={{
-                                            minWidth: "300px"
+                                            minWidth: { xs: "0px", "sm": "300px" }
                                         }}
                                         onClick={() => option.onSelect(navigate)}
                                     >

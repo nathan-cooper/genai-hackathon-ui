@@ -14,10 +14,13 @@ const DetailContainer = styled(Box)({
     padding: "12px"
 });
 
-const RowContainer = styled(Grid)({
+const RowContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
-    boxSizing: "border-box"
-});
+    boxSizing: "border-box",
+    [theme.breakpoints.down("md")]: {
+        gap: "24px"
+    }
+}))
 
 const ColContainer = styled(Grid)({
     display: "flex",
@@ -35,9 +38,12 @@ const ProductNameText = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const ColText = styled(Typography)({
-    fontSize: "18px"
-});
+const ColText = styled(Typography)(({ theme }) => ({
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+        textAlign: "center"
+    }
+}))
 
 export interface ProductDetailPageProps {
     creditCard: CreditCard
@@ -80,7 +86,10 @@ const ProductDetailPage = () => {
                                 </ProductNameText>
                             </Grid>
                             {product.image && (
-                                <Grid item className="flex flex-row justify-left">
+                                <Grid item sx={{
+                                    display: "flex",
+                                    justifyContent: {xs: "center", md: "flex-start"}
+                                }}>
                                     <img src={product.image} />
                                 </Grid>
                             )}

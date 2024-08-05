@@ -1,7 +1,8 @@
-import { Box, Button, ButtonGroup, Grid, Paper, Typography, styled } from "@mui/material";
+import { Box, Button, ButtonGroup, Grid, Paper, Typography, styled, useMediaQuery, useTheme } from "@mui/material";
 import HeadingGraphic from "../assets/headingGraphic.png";
 import { useNavigate } from "react-router-dom";
 import Header from "../componenets/Header";
+import EvolveLogo from "../assets/Evolve Bank Logo_logo_only.png";
 
 const LandingContainer = styled(Box)({
   maxWidth: "100%",
@@ -41,6 +42,9 @@ const Heading = styled(Typography)({
 
 const LandingPage = () => {
   const navigate = useNavigate();
+
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <LandingContainer>
@@ -82,13 +86,18 @@ const LandingPage = () => {
       </StyledPaper>
 
       <Heading sx={{ textAlign: "center", marginBottom: "14px" }}>How can we help?</Heading>
-      <ButtonGroup variant="outlined">
+      <ButtonGroup variant="outlined" orientation={mobile ? "vertical": "horizontal"}>
         <Button onClick={() => navigate("/unsure?id=Q4")}>Credit Cards</Button>
         <Button onClick={() => navigate("/loanList?list=personal")}>Personal Loans</Button>
         <Button onClick={() => navigate("/loanList?list=student")}>Student Loans</Button>
         <Button>BNPL</Button>
         <Button onClick={() => navigate("/unsure?id=Q1")}>I'm not sure</Button>
       </ButtonGroup>
+      <img src={EvolveLogo} style={{
+        width: "100px",
+        height: "auto",
+        margin: "32px 0px"
+      }} />
     </LandingContainer>
   )
 };

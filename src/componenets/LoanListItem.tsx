@@ -1,22 +1,31 @@
 import { Button, Grid, Link, Typography, styled } from "@mui/material";
 import { Loan } from "../types/evolve.types";
 import { useNavigate } from "react-router-dom";
-import { StyledPaper } from "./ListItem";
+import { MobileLabel, StyledPaper } from "./ListItem";
 
-const RowContainer = styled(Grid)({
+const RowContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
-    boxSizing: "border-box"
-});
+    boxSizing: "border-box",
+    [theme.breakpoints.down("md")]: {
+        gap: "16px"
+    }
+}))
 
-const ColContainer = styled(Grid)({
+const ColContainer = styled(Grid)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
-    gap: "16px"
-});
+    gap: "16px",
+    [theme.breakpoints.down("md")]: {
+        alignItems: "center"
+    }
+}))
 
-const ColText = styled(Typography)({
-    fontSize: "18px"
-});
+const ColText = styled(Typography)(({ theme }) => ({
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+        textAlign: "center"
+    }
+}));
 
 export interface LoanListItemProps {
     loan: Loan
@@ -34,27 +43,30 @@ const LoanListItem = ({ loan }: LoanListItemProps) => {
             <RowContainer container direction={"row"}>
                 <ColContainer item container direction={"column"} md={2.4}>
                     <Grid item>
-                        <ColText>
+                        <ColText fontWeight={"bold"}>
                             {loan.productName}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2.4}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        <MobileLabel>APR</MobileLabel>
                         <ColText>
                             {loan.apr}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2.4}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        <MobileLabel>Loan Amount</MobileLabel>
                         <ColText>
                             {loan.loanAmount}
                         </ColText>
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2.4}>
-                    <Grid item>
+                    <Grid item sx={{ display: "grid" }}>
+                        <MobileLabel>Loan Term</MobileLabel>
                         <ColText>
                             {loan.loanTerm}
                         </ColText>
