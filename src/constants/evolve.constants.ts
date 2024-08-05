@@ -1,9 +1,9 @@
 import { Question } from "../types/evolve.types";
 
-export const DINING_CARDS = ["CR001", "CR003", "CR004"];
-export const FUEL_CARDS = ["CR001", "CR003", "CR004"];
-export const TRAVEL_CARDS = ["CR002", "CR003", "CR004"];
-export const GROCERY_CARDS = ["CR001", "CR004", "CR005"];
+export const DINING_CARDS = ["CR001", "CR004", "CR003"];
+export const FUEL_CARDS = ["CR003", "CR004", "CR001"];
+export const TRAVEL_CARDS = ["CR002", "CR004", "CR003"];
+export const GROCERY_CARDS = ["CR005", "CR004", "CR001"];
 export const RENOVATION_CARDS = ["CR006", "CR001", "CR004"];
 export const EVERYDAY_CARDS = ["CR004", "CR001", "CR003"];
 export const MAX_REWARD_CARDS = ["CR005", "CR002", "CR001"];
