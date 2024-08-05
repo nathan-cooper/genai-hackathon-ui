@@ -2,49 +2,49 @@
     {
         "id": "CR001",
         "productName": "Evolve Cashback Card",
-        "rewards": "Earn 5% cash back for purchases at different merchants vary across each Quarter, 2% on dining & 1% on all other purchases",
-        "annualFee": 0.0,
+        "annualFee": null,
         "apr": "18.24% - 26.99%",
+        "rewards": "Earn 5% cash back on purchases at select merchants each quarter, 2% on dining, and 1% on all other purchases.",
         "introOffer": null
     },
     {
         "id": "CR002",
-        "productName": "Evolve TravelPlus Card",
-        "rewards": "3% on ticket/hotel booking with specific merchants",
-        "annualFee": 99.0,
+        "productName": "Evolve Travel Plus Card",
+        "annualFee": 99.00,
         "apr": "19.00% - 29.99%",
-        "introOffer": "Card opening bonus with 50000 points (equivalent to $500) if card member spends $4000 in first 3 months"
+        "rewards": "3% cash back on ticket and hotel bookings with select merchants.",
+        "introOffer": "Card opening bonus of 50,000 points (equivalent to $500) when you spend $4,000 in the first 3 months."
     },
     {
         "id": "CR003",
         "productName": "Evolve Fuel Plus Card",
-        "rewards": "3% on Fuel and 1% on remaining purchases",
-        "annualFee": 0.0,
+        "annualFee": null,
         "apr": "19.00% - 29.99%",
+        "rewards": "3% cash back on fuel purchases and 1% on all other purchases.",
         "introOffer": null
     },
     {
         "id": "CR004",
         "productName": "Evolve Platinum Card",
-        "rewards": "1.5% on all purchases\n",
-        "annualFee": 0.0,
+        "annualFee": null,
         "apr": "18.50% - 29.99%",
-        "introOffer": "Card opening bonus $150 if card member spends $1000 in first 3 months"
+        "rewards": "1.5% cash back on all purchases.",
+        "introOffer": "Card opening bonus of $150 when you spend $1,000 in the first 3 months."
     },
     {
         "id": "CR005",
-        "productName": "Evolve Blue Cash Card",
-        "rewards": "6% bonus on Grocery purchases from specific stores. 1% bonus on All purchases",
-        "annualFee": 99.0,
+        "productName": "Evolve blue Cash Card",
+        "annualFee": 99.00,
         "apr": "18.00% - 29.99%",
-        "introOffer": "Card opening bonus $200 if card member spends $2000 in first 6 months"
+        "rewards": "6% bonus on grocery purchases from select stores and 1% on all other purchases.",
+        "introOffer": "Card opening bonus of $200 when you spend $2,000 in the first 6 months."
     },
     {
         "id": "CR006",
-        "productName": "Evolve Renovation Card",
-        "rewards": "3% rewards on Home renovation & Electric appliances from specific Merchants. 1% on All purchases",
-        "annualFee": 0.0,
+        "productName": "Evolve renovation Card",
+        "annualFee": null,
         "apr": "18.00% - 29.99%",
-        "introOffer": "Purchases over $1500 on Differed Interest Promos"
+        "rewards": "3% rewards on home renovation and electrical appliances from select merchants, and 1% on all other purchases.",
+        "introOffer": "Purchases over $1,500 on deferred interest promotions."
     }
 ]

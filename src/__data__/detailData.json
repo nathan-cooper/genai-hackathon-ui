@@ -2,43 +2,43 @@
     {
         "id": "CR001",
         "Product": "Evolve Cash Back Credit Card",
-        "Column1": "Earn 5% cash back on everyday purchase at different places you shop each quarter, up to the quarterly maximum when you activate. Plus earn 2% on dining and 1% cash back on all other purchases with no annual fee",
-        "Column2": "Unlimited Cashback Match Get an Unlimted dollar-for-dollar match of all the cash back you earn at the end of your first year automatically.There is no limit to how much we'll match.",
-        "Column3": "0% intro APR for 15 months on purchases and balance transfers and 3%  intro Balance Transfer Fee  until October 10,2024.  Then 18.24% to 28.24%  Standard Variable  Purchase APR and up to  5% fee for future balance transfers will apply.         "
+        "Column1": "Earn 5% cash back on everyday purchases at various locations each quarter, up to the quarterly maximum when activated. Plus, earn 2% on dining and 1% on all other purchases. No annual fee.",
+        "Column2": "Unlimited Cashback Match Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year automatically. There is no limit to how much we’ll match.",
+        "Column3": "0% intro APR for 15 months on purchases and balance transfers, with a 3% intro balance transfer fee until October 10, 2024. After that, a standard variable APR of 18.24% to 26.99% applies, along with up to a 5% fee for future balance transfers."
     },
     {
         "id": "CR002",
         "Product": "Evolve Travel Plus Credit Card",
-        "Column1": "Earn 3% on ticket/hotel booking with specific merchants. Plus, earn 1% cash back on all other purchases.  $99 Annual Fee",
-        "Column2": "Card opening bonus with 50,000 points if card member spends $4000 in first 3 months.   ",
-        "Column3": "0% Apr on purchases for first 12 months and balance transfer and 2 % intro balance transfer fee until Aug31,2024. Then 19.00% to 29.99% standard variable purchase APR."
+        "Column1": "Earn 3% on ticket and hotel bookings with specific merchants. Plus, earn 1% cash back on all other purchases. $99 annual fee.",
+        "Column2": "Card opening bonus of 50,000 points if you spend $4,000 in the first 3 months.",
+        "Column3": "0% APR on purchases for the first 12 months and balance transfers, with a 2% intro balance transfer fee until August 31, 2024. After that, a standard variable purchase APR of 19.00% to 29.99% applies."
     },
     {
         "id": "CR003",
-        "Product": "Evolve Fuel Plus  Credit Card        ",
-        "Column1": "Earn 3% on Fuel purchases for up to $5000. Plus, earn 1% cash back on all other purchases.  No Annual Fee    ",
-        "Column2": "We\u2019ll automatically  match all the Miles  you\u2019ve earned at the  end of your first year.  There is no limit to how  much we\u2019ll match.2 There's no signing up, no  minimum spending or  maximum rewards.  ",
-        "Column3": "19.00% to 29.99% standard variable purchase APR        "
+        "Product": "Evolve Fuel Plus Credit Card",
+        "Column1": "Earn 3% on fuel purchases up to $5,000. Plus, earn 1% cash back on all other purchases. No annual fee.",
+        "Column2": "We'll automatically match all the miles you've earned at the end of your first year, with no limit on the amount.",
+        "Column3": "19.00% to 29.99% standard variable purchase APR."
     },
     {
         "id": "CR004",
-        "Product": "Evolve Platinum  Credit Card     ",
-        "Column1": "Earn 1.5 % cash back on all  purchases.  No Annual Fee   ",
-        "Column2": "Card opening bonus with 15,000 points if card member spends $1000 in first 3 months.   ",
-        "Column3": "0% Apr on purchases for  first 12 months and  balance transfer and 2 %  intro balance transfer  fee until Aug31,2024. Then 18.50% to 29.99% standard variable purchase APR"
+        "Product": "Evolve Platinum Credit Card",
+        "Column1": "Earn 1.5% cash back on all purchases. No annual fee.",
+        "Column2": "Card opening bonus of 15,000 points if you spend $1,000 in the first 3 months.",
+        "Column3": "0% APR on purchases and balance transfers for the first 12 months, with a 2% intro balance transfer fee until August 31, 2024. After that, a standard variable purchase APR of 18.50% to 29.99% applies."
     },
     {
         "id": "CR005",
-        "Product": "Evolve blue Cash  Credit Card     ",
-        "Column1": "Earn 6% on Grocery purchases with specific  merchants. Plus, earn 1% cash back  on all other purchases.  $99 Annual Fee",
-        "Column2": "Card opening bonus with 30,000 points if  card member spends  $3000 in first 3  months.  ",
-        "Column3": "0% Apr on purchases for first  12 months and balance  transfer and 2 % intro  balance transfer fee  until Aug31,2024. Then 18.00% to 29.99%  standard variable purchase APR."
+        "Product": "Evolve blue Cash Credit Card",
+        "Column1": "Earn 6% on grocery purchases with specific merchants. Plus, earn 1% cash back on all other purchases. $99 annual fee.",
+        "Column2": "Card opening bonus of 30,000 points if you spend $3,000 in the first 3 months.",
+        "Column3": "0% APR on purchases and balance transfers for the first 12 months, with a 2% intro balance transfer fee until August 31, 2024. After that, a standard variable purchase APR of 18.00% to 29.99% applies."
     },
     {
         "id": "CR006",
-        "Product": "Evolve renovation Credit  Card       ",
-        "Column1": "Earn 3% on Electric  Appliances and home  building products with specific merchants.  Plus, earn 1% cash back on  all other purchases.  No Annual Fee",
-        "Column2": "6-24 MONTHS EVERYDAY FINANCING on purchases above $1500 up to Dec 2024.",
-        "Column3": "0% Apr on purchases for  first 12 months and  balance transfer and 2 %  intro balance transfer fee until Nov30,2024. Then 18.00% to 29.99%  standard variable  purchase APR. "
+        "Product": "Evolve renovation Credit Card",
+        "Column1": "Earn 3% on electric appliances and home building products with specific merchants. Plus, earn 1% cash back on all other purchases. No annual fee.",
+        "Column2": "Purchases over $1,500 can be moved to a deferred interest promo until December 2024.",
+        "Column3": "0% APR on purchases and balance transfers for the first 12 months, with a 2% intro balance transfer fee until November 30, 2024. After that, a standard variable purchase APR of 18.00% to 29.99% applies."
     }
 ]
