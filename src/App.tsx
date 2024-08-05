@@ -5,16 +5,8 @@ import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import UnsurePage from './pages/UnsurePage';
 import LoanListPage from './pages/LoanListPage';
-import { useEffect } from 'react';
 
 const App = () => {
-
-  useEffect(() => {
-    const d = document.getElementsByTagName("body")[0].children[0];
-    if (d && d.innerHTML.includes("tiiny")) {
-      d.remove();
-    }
-  }, []);
 
   return (
     <Router>

@@ -44,11 +44,11 @@ export const Q3: Question = {
     options: [
         {
             label: "Yes", 
-            onSelect: (nav) => nav("/productList?list=student")
+            onSelect: (nav) => nav("/loanList?list=student")
         },
         {
             label: "No", 
-            onSelect: (nav) => nav("/productList?list=personal")
+            onSelect: (nav) => nav("/loanList?list=personal")
         }
     ]
 }
