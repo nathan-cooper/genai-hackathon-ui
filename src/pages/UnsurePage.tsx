@@ -1,6 +1,6 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Option, Question } from "../types/evolve.types";
+import { Question } from "../types/evolve.types";
 import { getQuestion } from "../helper/cardHelper";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../componenets/Header";
