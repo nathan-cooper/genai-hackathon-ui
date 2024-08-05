@@ -13,7 +13,7 @@ export const Q1: Question = {
     question: "What is the reason for your credit application today?",
     options: [
         {
-            label: "Substantial one-time expenses or charges", 
+            label: "One-time expenses or charges", 
             onSelect: (nav) => nav("/unsure?id=Q2")
         },
         {
