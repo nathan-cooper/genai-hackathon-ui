@@ -6,7 +6,7 @@ const BackButtonContainer = styled(Box)({
     flexDirection: "row",
     width: "100%",
     justifyContent: "flex-start",
-    marginBottom: "24px"
+    height: "fit-content"
 });
 
 const BackButton = () => {

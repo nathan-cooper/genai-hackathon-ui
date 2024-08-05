@@ -6,7 +6,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../componenets/Header";
 import { StyledPaper } from "../componenets/ListItem";
 import ChatCard from "../componenets/ChatCard";
-import BackButton from "../componenets/BackButton";
 
 const UnsureContainer = styled(Box)({
     maxWidth: "100%",
@@ -64,7 +63,6 @@ const UnsurePage = () => {
     return (
         <UnsureContainer>
             <Header />
-            <BackButton />
             {question && (
                 <StyledPaper elevation={3}
                     sx={{marginTop: "36px", width: "fit-content"}}

@@ -35,7 +35,8 @@ const StyledPaper = styled(Paper)({
 const Heading = styled(Typography)({
   fontSize: "24px",
   fontWeight: "bold",
-  textAlign: "right"
+  textAlign: "right",
+  color: "black"
 });
 
 const LandingPage = () => {
@@ -49,7 +50,8 @@ const LandingPage = () => {
           fontSize: "36px",
           fontWeight: "bold",
           textAlign: "center",
-          marginBottom: "32px"
+          marginBottom: "32px",
+          color: "black"
         }}
       >
         Evolve Bank

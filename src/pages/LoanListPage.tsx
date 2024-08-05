@@ -7,7 +7,6 @@ import Header from "../componenets/Header";
 import { HeaderText, ListContainer, RowContainer, TableContainer } from "./ProductListPage";
 import ChatCard from "../componenets/ChatCard";
 import { useLocation } from "react-router-dom";
-import BackButton from "../componenets/BackButton";
 
 const LoanListPage = () => {
     const [prodList, setProdList] = useState<Loan[]>([]);
@@ -23,7 +22,6 @@ const LoanListPage = () => {
     return (
         <ListContainer>
             <Header />
-            <BackButton />
             <TableContainer>
                 <RowContainer container direction={"row"} sx={{borderBottom: "4px solid #1976d2"}}>
                     <Grid item md={2.4}>

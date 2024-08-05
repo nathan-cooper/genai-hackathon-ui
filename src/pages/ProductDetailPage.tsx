@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Header from "../componenets/Header";
 import { StyledPaper } from "../componenets/ListItem";
 import ChatCard from "../componenets/ChatCard";
-import BackButton from "../componenets/BackButton";
 
 const DetailContainer = styled(Box)({
     maxWidth: "100%",
@@ -71,7 +70,6 @@ const ProductDetailPage = () => {
     return (
         <DetailContainer>
             <Header />
-            <BackButton />
             {product && (
                 <StyledPaper elevation={3}>
                     <RowContainer container direction={"row"}>
