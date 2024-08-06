@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { Dialog, DialogTitle, DialogContent, IconButton, Button, Link } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Link } from '@mui/material';
 
 const CreditTermsDialog = () => {
     // const [open, setOpen] = useState(false);
