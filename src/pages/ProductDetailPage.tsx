@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Header from "../componenets/Header";
 import { StyledPaper } from "../componenets/ListItem";
 import ChatCard from "../componenets/ChatCard";
+import CreditTermsLink from "../componenets/CreditTermsLink";
 
 const DetailContainer = styled(Box)({
     maxWidth: "100%",
@@ -113,6 +114,7 @@ const ProductDetailPage = () => {
                             className="pr-12 pl-12"
                         >
                             <Button variant="contained">Apply Now</Button>
+                            <CreditTermsLink />
                         </ColContainer>
                     </RowContainer>
                 </StyledPaper>

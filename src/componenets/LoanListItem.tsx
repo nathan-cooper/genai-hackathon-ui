@@ -2,6 +2,7 @@ import { Button, Grid, Link, Typography, styled } from "@mui/material";
 import { Loan } from "../types/evolve.types";
 import { useNavigate } from "react-router-dom";
 import { MobileLabel, StyledPaper } from "./ListItem";
+import CreditTermsLink from "./CreditTermsLink";
 
 const RowContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
@@ -15,8 +16,10 @@ const ColContainer = styled(Grid)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     gap: "16px",
+    paddingRight: "16px",
     [theme.breakpoints.down("md")]: {
-        alignItems: "center"
+        alignItems: "center",
+        paddingRight: "0px"
     }
 }))
 
@@ -72,13 +75,12 @@ const LoanListItem = ({ loan }: LoanListItemProps) => {
                         </ColText>
                     </Grid>
                 </ColContainer>
-                <ColContainer item container direction={"column"} md={2.4}
-                    className="pr-12 pl-12"
-                >
+                <ColContainer item container direction={"column"} md={2.4}>
                     <Button variant="contained">Apply Now</Button>
                     <Link sx={{ textAlign: "center", ":hover": { cursor: "pointer" } }}
                         onClick={handleLearnMore}
                     >Learn more</Link>
+                    <CreditTermsLink />
                 </ColContainer>
             </RowContainer>
         </StyledPaper>

@@ -3,6 +3,7 @@ import HeadingGraphic from "../assets/headingGraphic.png";
 import { useNavigate } from "react-router-dom";
 import Header from "../componenets/Header";
 import EvolveLogo from "../assets/Evolve Bank Logo_logo_only.png";
+import ChatButton from "../componenets/ChatButton";
 
 const LandingContainer = styled(Box)({
   maxWidth: "100%",
@@ -73,7 +74,7 @@ const LandingPage = () => {
                 <Heading>
                   Hello! I am here to help
                 </Heading>
-                <Button variant="contained" sx={{ width: "fit-content" }}>Chat with us</Button>
+                <ChatButton />
               </div>
             </Grid>
           </ColContainer>
