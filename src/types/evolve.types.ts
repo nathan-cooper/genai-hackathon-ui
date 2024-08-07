@@ -38,3 +38,16 @@ export interface Question {
     question: string;
     options: Option[];
 }
+
+export interface StatesMap {
+    [key: string]: string;
+};
+
+export interface DecisionMessage {
+    heading: string;
+    body: string[];
+}
+
+export interface DecisionMap {
+    [key:string]: DecisionMessage;
+}
