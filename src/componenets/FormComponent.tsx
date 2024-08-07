@@ -62,6 +62,7 @@ const FormComponent = () => {
         // Send data to API
         fetch(API_URL + '/lending/api/v1/creditrisk', {
             method: 'POST',
+            mode: "no-cors",
             headers: {
                 'Content-Type': 'application/json',
             },
