@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
@@ -40,8 +40,7 @@ interface FormData {
 
 const FormComponent = () => {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm<FormData>();
-    const [formData, setFormData] = useState<FormData>({} as FormData);
-    const [age, setAge] = useState<number | null>(null);
+    const [_, setFormData] = useState<FormData>({} as FormData);
     const navigate = useNavigate();
     const location = useLocation();
     const isLoanAccount = location.state?.isLoanAccount || false;
@@ -75,7 +74,7 @@ const FormComponent = () => {
         })
             .then((response) => response.json())
             .then((data) => console.log('Success:', data))
-            .catch((error) => navigate('/status', { state: { from: "/form", status: "approved", productSelected: productSelected } }));
+            .catch(() => navigate('/status', { state: { from: "/form", status: "approved", productSelected: productSelected } }));
         console.log({
             ...data,
             "dob": formatDOBtoString(data.dob),
