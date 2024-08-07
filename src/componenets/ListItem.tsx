@@ -52,6 +52,10 @@ export interface ListItemProps {
 const ListItem = ({ card }: ListItemProps) => {
     const navigate = useNavigate();
 
+    const handleApplyNow = () => {
+        navigate('/form', { state: { isLoanAccount: false, productSelected: card.productName, from: "/listItem" } });
+    };
+
     const handleLearnMore = () => {
         navigate(`/productDetail?id=${card.id}`);
     }
@@ -105,7 +109,7 @@ const ListItem = ({ card }: ListItemProps) => {
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2}>
-                    <Button variant="contained">Apply Now</Button>
+                <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
                     <Link sx={{ textAlign: "center", ":hover": { cursor: "pointer" } }}
                         onClick={handleLearnMore}
                     >Learn more</Link>

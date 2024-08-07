@@ -55,6 +55,10 @@ const ProductDetailPage = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const handleApplyNow = () => {
+        navigate('/form', { state: { isLoanAccount: product?.id.startsWith("LN"), productSelected: product?.productName, from: "/productDetail" } });
+    };
+
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         const id = queryParams.get('id');
@@ -113,7 +117,7 @@ const ProductDetailPage = () => {
                         <ColContainer item container direction={"column"} md={2.4} xs={12}
                             className="pr-12 pl-12"
                         >
-                            <Button variant="contained">Apply Now</Button>
+                            <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
                             <CreditTermsLink />
                         </ColContainer>
                     </RowContainer>

@@ -37,6 +37,10 @@ export interface LoanListItemProps {
 const LoanListItem = ({ loan }: LoanListItemProps) => {
     const navigate = useNavigate();
 
+    const handleApplyNow = () => {
+        navigate('/form', { state: { isLoanAccount: true, productSelected: loan.productName, from: "/loanListItem" } });
+    };
+
     const handleLearnMore = () => {
         navigate(`/productDetail?id=${loan.id}`);
     }
@@ -76,7 +80,7 @@ const LoanListItem = ({ loan }: LoanListItemProps) => {
                     </Grid>
                 </ColContainer>
                 <ColContainer item container direction={"column"} md={2.4}>
-                    <Button variant="contained">Apply Now</Button>
+                    <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
                     <Link sx={{ textAlign: "center", ":hover": { cursor: "pointer" } }}
                         onClick={handleLearnMore}
                     >Learn more</Link>
