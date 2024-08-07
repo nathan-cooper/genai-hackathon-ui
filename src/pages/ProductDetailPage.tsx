@@ -117,7 +117,7 @@ const ProductDetailPage = () => {
                         <ColContainer item container direction={"column"} md={2.4} xs={12}
                             className="pr-12 pl-12"
                         >
-                            <Button variant="contained">Apply Now</Button>
+                            <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
                             <CreditTermsLink />
                         </ColContainer>
                     </RowContainer>
