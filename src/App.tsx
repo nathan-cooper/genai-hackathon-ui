@@ -5,13 +5,15 @@ import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import UnsurePage from './pages/UnsurePage';
 import LoanListPage from './pages/LoanListPage';
+import FormPage from './pages/FormPage';
+import DecisionPage from './pages/DecisionPage';
 
 const App = () => {
 
   return (
     <Router>
       <Routes>
-        <Route 
+        <Route
           path="/"
           Component={LandingPage}
         />
@@ -34,6 +36,14 @@ const App = () => {
         <Route
           path="/unsure"
           Component={UnsurePage}
+        />
+        <Route
+          path="/form"
+          Component={FormPage}
+        />
+        <Route
+          path="/status"
+          Component={DecisionPage}
         />
       </Routes>
     </Router>
