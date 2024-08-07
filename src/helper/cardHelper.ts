@@ -64,22 +64,32 @@ export const populateList = (idList: string[] | undefined) => {
 
 export const getCreditCard = (id: string) => {
 
-    const cardDetail = detailData.find((c) => c.id === id)
-    if (!cardDetail) return null;
+    let cardData = abstractData.find((c) => c.id === id);
+    if (!cardData) {
+        cardData = abstractData.find((c) => c.productName === id.replace(/_/g, " "));
+    }
 
-    const cardData = abstractData.find((c) => c.id === id);
     if (!cardData) return null;
+
+    const cid = cardData.id;
+
+    let cardDetail = detailData.find((c) => c.id === cid)
+    if (!cardDetail) return null;
 
     const card: CreditCard = {
         ...cardData,
         productDetail: cardDetail,
-        image: getLogo(id)
+        image: getLogo(cid)
     }
     return card;
 }
 
 export const getLoan = (id: string) => {
-    return loanData.find((l) => l.id === id);
+    let loan = loanData.find((l) => l.id === id);
+    if (!loan) {
+        loan = loanData.find((l) => l.productName === id.replace(/_/g, " "));
+    }
+    return loan;
 }
 
 export const getQuestion = (id: string | null) => {

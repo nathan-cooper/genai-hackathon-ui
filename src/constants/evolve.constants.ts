@@ -1,6 +1,8 @@
 import { Question, StatesMap } from "../types/evolve.types";
 
 export const API_URL = "https://credit-lending-api-0-sirishram222-dev.apps.sandbox-m3.1530.p1.openshiftapps.com"
+export const CHATBOT_URL = "http://34.224.82.2:8080/";
+
 export const DINING_CARDS = ["CR001", "CR004", "CR003"];
 export const FUEL_CARDS = ["CR003", "CR004", "CR001"];
 export const TRAVEL_CARDS = ["CR002", "CR004", "CR003"];

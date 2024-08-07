@@ -1,5 +1,6 @@
-import { Box, Button, Card, Typography, styled } from "@mui/material";
+import { Box, Card, Typography, styled } from "@mui/material";
 import BackButton from "./BackButton";
+import ChatButton from "./ChatButton";
 
 const ChatText = styled(Typography)({
     fontSize: "24px",
@@ -34,7 +35,7 @@ const ChatCard = () => {
             <BackButton />
             <StyledCard elevation={3}>
                 <ChatText>Questions? We can help</ChatText>
-                <Button variant="contained">Chat with us</Button>
+                <ChatButton />
             </StyledCard>
         </CardContainer>
     )

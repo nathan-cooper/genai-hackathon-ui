@@ -1,6 +1,7 @@
 import { Button, Grid, Link, Paper, Typography, styled } from "@mui/material";
 import { CreditCard } from "../types/evolve.types";
 import { useNavigate } from "react-router-dom";
+import CreditTermsLink from "./CreditTermsLink";
 
 const RowContainer = styled(Grid)(({ theme }) => ({
     width: "100%",
@@ -14,8 +15,10 @@ const ColContainer = styled(Grid)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     gap: "16px",
+    paddingRight: "16px",
     [theme.breakpoints.down("md")]: {
-        alignItems: "center"
+        alignItems: "center",
+        paddingRight: "0px"
     }
 }))
 
@@ -105,13 +108,12 @@ const ListItem = ({ card }: ListItemProps) => {
                         </ColText>
                     </Grid>
                 </ColContainer>
-                <ColContainer item container direction={"column"} md={2}
-                    className="pr-12 pl-12"
-                >
-                    <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
+                <ColContainer item container direction={"column"} md={2}>
+                <Button variant="contained" onClick={handleApplyNow}>Apply Now</Button>
                     <Link sx={{ textAlign: "center", ":hover": { cursor: "pointer" } }}
                         onClick={handleLearnMore}
                     >Learn more</Link>
+                    <CreditTermsLink />
                 </ColContainer>
             </RowContainer>
         </StyledPaper>
