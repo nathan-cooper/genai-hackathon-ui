@@ -22,12 +22,9 @@ const FormPage = () => {
                 location.state?.from.startsWith('/loanListItem') ||
                 location.state?.from.startsWith('/productDetail')
             );
-
-        console.log(location.state?.from);
-
         // If the user is not navigating from an allowed path, redirect to the root path
         if (!isAllowedPath) {
-            navigate('/', { replace: true });
+            navigate('/', { replace: true, state: {} });
         }
     }, [navigate, location.state]);
 

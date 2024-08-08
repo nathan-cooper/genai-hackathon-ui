@@ -7,6 +7,7 @@ import UnsurePage from './pages/UnsurePage';
 import LoanListPage from './pages/LoanListPage';
 import FormPage from './pages/FormPage';
 import DecisionPage from './pages/DecisionPage';
+import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
 
@@ -44,6 +45,10 @@ const App = () => {
         <Route
           path="/status"
           Component={DecisionPage}
+        />
+        <Route
+          path="/techdiff"
+          Component={ErrorPage}
         />
       </Routes>
     </Router>

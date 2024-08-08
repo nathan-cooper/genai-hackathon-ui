@@ -72,15 +72,19 @@ const FormComponent = () => {
                 "age": getAge(data.dob),
             }),
         })
-            .then((response) => response.json())
-            .then((data) => console.log('Success:', data))
-            .catch(() => navigate('/status', { state: { from: "/form", status: "approved", productSelected: productSelected } }));
-        console.log({
-            ...data,
-            "dob": formatDOBtoString(data.dob),
-            "productSelected": productSelected,
-            "age": getAge(data.dob),
-        });
+            .then((response) => response.text())
+            .then((data) => navigate('/status',
+                {
+                    replace: true,
+                    state:
+                    {
+                        from: "/form",
+                        status: data,
+                        isLoanAccount: isLoanAccount,
+                        productSelected: productSelected
+                    }
+                }))
+            .catch(() => navigate('/techdiff', { replace: true, state: {} }));
     };
 
     const formatDOB = (event: React.ChangeEvent<HTMLInputElement>) => {

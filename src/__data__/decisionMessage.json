@@ -1,0 +1,62 @@
+[
+    {
+        "id": "card",
+        "decision": "approved",
+        "message": {
+            "heading": "Congratulations ! Your credit card application is approved.",
+            "body": [
+                "You will be receiving your card in next 7 days. Thank you for being a part of Evolve Bank."
+            ]
+        }
+    },
+    {
+        "id": "card",
+        "decision": "declined",
+        "message": {
+            "heading": "Thank you for applying for Evolve bank credit card.",
+            "body": [
+                "We regret to inform you that you are not eligible for the Credit card you have applied."
+            ]
+        }
+    },
+    {
+        "id": "card",
+        "decision": "refer",
+        "message": {
+            "heading": "Thank you for applying for Evolve bank credit card.",
+            "body": [
+                "We need some additional details regarding your application. We will be reaching out to you on your email id to get required details, after which we will be proceeding with your application."
+            ]
+        }
+    },
+    {
+        "id": "loan",
+        "decision": "approved",
+        "message": {
+            "heading": "Congratulations ! Your personal loan application is approved.",
+            "body": [
+                "You will be receiving further communication on your email id on the process to receive the loan amount."
+            ]
+        }
+    },
+    {
+        "id": "loan",
+        "decision": "declined",
+        "message": {
+            "heading": "Thank you for your Loan application with Evolve Bank.",
+            "body": [
+                "We regret to inform you that you are not eligible for the loan."
+            ]
+        }
+    },
+    {
+        "id": "loan",
+        "decision": "refer",
+        "message": {
+            "heading": "Thank you for your Loan application with Evolve Bank.",
+            "body": [
+                "We need some additional details regarding your application. We will be reaching out to you on your email id to get required details, after which we will be proceeding with your application."
+            ]
+        }
+    }
+]
